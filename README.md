@@ -1,4 +1,37 @@
 # Angular QuickStart Source
+
+Routing & Navigation example app service-worker.js:1 bad HTTP response 
+
+Hi,
+I'm trying to get the sample from the Angular 2 [ROUTING & NAVIGATION docs](https://angular.io/docs/ts/latest/guide/router.html) to work.
+It runs fine on [the example plunker](http://plnkr.co/edit/), but if you download the code and use the app direcoty in a [quickstart](https://github.com/angular/quickstart) project, it fails to run.
+The 'Loading...' message never goes away and there are these errors in the console:
+```
+service-worker.js:1 A bad HTTP response code (404) was received when fetching the script.
+http://localhost:3000/service-worker.js Failed to load resource: net::ERR_INVALID_RESPONSE
+```
+
+This is a good example app, and since it has all this documenation, I would like to use it as a starting point for further work.
+
+The example Tour of Heroes app has various seemingly disconnected manifestations.  
+This version seems the most mature and complete.  It would be nice to be able to run it locally.
+
+You can reproduce the errors by cloneing the quickstart, and downloading the plunker and replacing the app folder from quickstart with the one from the plunker.  
+You would also need to run npm install.
+I also changed main.js to app.module.js in the systemjs.config.js file like this:
+```
+packages: {
+      app: {
+        main: './app.module.js',
+```
+
+Any help would be appreciated.
+
+:3000/service-worker.js:1 
+A bad HTTP response code (404) was received when fetching the script.
+
+
+
 [![Build Status][travis-badge]][travis-badge-url]
 
 This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
